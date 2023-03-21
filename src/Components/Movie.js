@@ -4,9 +4,16 @@ import { GlobaleContext } from './context'
 
 
 const Movie = () => {
-  const { movies } = GlobaleContext()
-  return (
+  const { movies, isLoading } = GlobaleContext()
 
+  if (isLoading) {
+    return (
+      <div >
+        <div className='loading'>Loading...</div>
+      </div>
+    )
+   }
+  return (
     <section className='movie-page'>
       <div className='container grid grid-4-col'>
         {movies.map((curMovie) => {
@@ -18,7 +25,6 @@ const Movie = () => {
                     ? `${curMovie.Title.slice(0,13)}...`
                     : curMovie.Title}</h2>
                   <img src={curMovie.Poster} alt={curMovie.imdbID} />
-
                 </div>
 
               </div>
