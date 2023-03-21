@@ -9,8 +9,8 @@
 }
 
 :root {
-  --text-clr: #4a5c6c;
-  --bg-clr: #f2f4fc;
+  --text-clr: #a1a2a3;
+  --bg-clr: #000000;
   --border-clr: rgb(156, 176, 193);
 }
 
@@ -24,7 +24,8 @@ body {
 
 h2 {
   font-family: "Lora", serif;
-  color: var(--text-clr);
+  /* color: var(--text-clr); */
+  color: white;
   font-size: 2rem;
   transition: all 0.5s linear;
 }
@@ -158,6 +159,7 @@ figure {
 
 .card-content {
   display: flex;
+  color: white;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -200,6 +202,7 @@ a:hover img {
 .back-btn {
   padding: 1.2rem 3.6rem;
   margin-bottom: 3rem;
+  color: white;
 }
 
 /* responsive code   */
